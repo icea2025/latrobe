@@ -107,7 +107,7 @@
           <li class="nav-item"><a class="nav-link" href="registration/index.html">Registration</a></li>
           <li class="nav-item"><a class="nav-link" href="program/index.html">Program</a></li>
           <li class="nav-item"><a class="nav-link" href="keynote/index.html">Keynote Speech</a></li>
-          <li class="nav-item"><a class="nav-link" href="keynote/index.html">Venue</a></li>
+          <li class="nav-item"><a class="nav-link" href="venue/index.html">Venue</a></li>
         </ul>
       </div>
     </div>
@@ -121,43 +121,91 @@
       </div>
     </div>
 
-<!-- Countdown Timer Display -->
-<div id="countdown" style="font-size: 24px; color: #ff0000; margin: 20px 0;"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conference Countdown & Clock</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+    }
+    #conference-info {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    #countdown {
+      font-size: 32px;
+      color: #ff0000;
+      margin-bottom: 20px;
+    }
+    #clock {
+      font-size: 24px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Conference information -->
+  <div id="conference-info">
+    Conference Starts on December 10, 2025 at 9:00 AM
+  </div>
 
-<script>
-  (function() {
-    // Set the target date: December 10, 2025 at 9:00 AM
+  <!-- Countdown timer display -->
+  <div id="countdown"></div>
+
+  <!-- Current time clock display -->
+  <div id="clock"></div>
+
+  <script>
+    // Set the target conference date and time
     const targetDate = new Date("Dec 10, 2025 09:00:00").getTime();
 
     // Function to update the countdown timer
     function updateCountdown() {
       const now = new Date().getTime();
-      const timeRemaining = targetDate - now;
+      const distance = targetDate - now;
 
-      // Check if the countdown has reached or passed the target date
-      if (timeRemaining <= 0) {
+      if (distance <= 0) {
         document.getElementById("countdown").textContent = "The conference has started!";
-        clearInterval(timerInterval); // Stop the interval once the event starts
+        clearInterval(countdownInterval);
         return;
       }
 
-      // Calculate the days, hours, minutes, and seconds remaining
-      const days    = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-      const hours   = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+      // Calculate days, hours, minutes, and seconds
+      const days    = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours   = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      // Update the countdown element with the formatted time remaining
-      document.getElementById("countdown").textContent =
+      document.getElementById("countdown").textContent = 
         `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
 
-    // Initial call to display the countdown immediately
+    // Function to update the current time clock
+    function updateClock() {
+      const now = new Date();
+      const hrs = now.getHours().toString().padStart(2, '0');
+      const mins = now.getMinutes().toString().padStart(2, '0');
+      const secs = now.getSeconds().toString().padStart(2, '0');
+      document.getElementById("clock").textContent = `Current Time: ${hrs}:${mins}:${secs}`;
+    }
+
+    // Initial calls to display values immediately
     updateCountdown();
-    // Update the countdown every second (1000 milliseconds)
-    const timerInterval = setInterval(updateCountdown, 1000);
-  })();
-</script>
+    updateClock();
+
+    // Update countdown and clock every second
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>
+
 
 
     <img src="image/Larana, Inc_pdf.jpg" class="img-fluid rounded mt-4" alt="ICEA 2024 Conference Banner">
