@@ -121,40 +121,42 @@
       </div>
     </div>
 
-   <!-- Countdown Display -->
-<div id="countdown" style="font-size:24px; color:#ff0000; margin:20px 0;"></div>
+<!-- Countdown Timer Display -->
+<div id="countdown" style="font-size: 24px; color: #ff0000; margin: 20px 0;"></div>
 
 <script>
-  // Set the target date and time for the conference
-  const targetDate = new Date("Dec 10, 2025 09:00:00").getTime();
+  (function() {
+    // Set the target date: December 10, 2025 at 9:00 AM
+    const targetDate = new Date("Dec 10, 2025 09:00:00").getTime();
 
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const timeRemaining = targetDate - now;
+    // Function to update the countdown timer
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const timeRemaining = targetDate - now;
 
-    // Check if the countdown is finished
-    if (timeRemaining < 0) {
-      document.getElementById("countdown").innerHTML = "The conference has started!";
-      clearInterval(interval); // Stop the countdown if needed
-      return;
+      // Check if the countdown has reached or passed the target date
+      if (timeRemaining <= 0) {
+        document.getElementById("countdown").textContent = "The conference has started!";
+        clearInterval(timerInterval); // Stop the interval once the event starts
+        return;
+      }
+
+      // Calculate the days, hours, minutes, and seconds remaining
+      const days    = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      const hours   = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+      // Update the countdown element with the formatted time remaining
+      document.getElementById("countdown").textContent =
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
 
-    // Calculate days, hours, minutes and seconds
-    const days    = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-    const hours   = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-    // Display the result in the element with id="countdown"
-    document.getElementById("countdown").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-  }
-
-  // Update countdown every second
-  const interval = setInterval(updateCountdown, 1000);
-  
-  // Initial call so there's no delay
-  updateCountdown();
+    // Initial call to display the countdown immediately
+    updateCountdown();
+    // Update the countdown every second (1000 milliseconds)
+    const timerInterval = setInterval(updateCountdown, 1000);
+  })();
 </script>
 
 
