@@ -64,6 +64,12 @@
       list-style-type: none;
       padding-left: 0;
     }
+    /* Remove bullet points in header and track sections */
+    .navbar ul li::before,
+    .track-section ul li::before {
+      content: none;
+    }
+    /* Optionally, you can keep bullets in other lists by keeping the general rule
     ul li::before {
       content: '\2022';
       color: #007bff;
@@ -72,6 +78,7 @@
       width: 1em;
       margin-left: -1em;
     }
+    */
   </style>
 </head>
 <body>
