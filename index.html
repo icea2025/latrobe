@@ -121,8 +121,42 @@
       </div>
     </div>
 
-    <!-- Countdown iframe added below the hero section -->
-    <iframe width="357" height="184" src="https://w2.countingdownto.com/6174560" frameborder="0"></iframe>
+   <!-- Countdown Display -->
+<div id="countdown" style="font-size:24px; color:#ff0000; margin:20px 0;"></div>
+
+<script>
+  // Set the target date and time for the conference
+  const targetDate = new Date("Dec 10, 2025 09:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const timeRemaining = targetDate - now;
+
+    // Check if the countdown is finished
+    if (timeRemaining < 0) {
+      document.getElementById("countdown").innerHTML = "The conference has started!";
+      clearInterval(interval); // Stop the countdown if needed
+      return;
+    }
+
+    // Calculate days, hours, minutes and seconds
+    const days    = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours   = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="countdown"
+    document.getElementById("countdown").innerHTML =
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+  }
+
+  // Update countdown every second
+  const interval = setInterval(updateCountdown, 1000);
+  
+  // Initial call so there's no delay
+  updateCountdown();
+</script>
+
 
     <img src="image/Larana, Inc_pdf.jpg" class="img-fluid rounded mt-4" alt="ICEA 2024 Conference Banner">
 		
