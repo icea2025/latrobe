@@ -26,7 +26,13 @@
     #important-dates .table-bordered { border:2px solid #004080; }
     #important-dates .table-bordered td { border:1px solid #004080; padding:10px; }
 
-    .supporters img, .sponsors img { width:150px; transition:transform .3s ease-in-out; }
+    .supporters img,
+    .sponsors img {
+      max-width: 100px;
+      height: auto;
+      transition: transform .3s ease-in-out;
+      }
+
     .supporters img:hover, .sponsors img:hover { transform:scale(1.1); }
   </style>
 </head>
