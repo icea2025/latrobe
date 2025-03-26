@@ -82,9 +82,10 @@
     <p class="intro-line delay-1">
       Explore cutting-edge research across diverse tracks including AI, Cybersecurity, Smart Grids, Quantum Computing, and 6G Networks.
     </p>
-    <p class="intro-line delay-2">
-      Not sure where your work fits? Submit to our General Track – all high-quality research is welcome!
-    </p>
+    <p class="general-track-note">
+  Not sure where your work fits? Submit to our General Track – all high-quality research is welcome!
+</p>
+
   </div>
 </div>
 
@@ -111,6 +112,21 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  @keyframes flashRed {
+    0%, 100% {
+      color: black;
+    }
+    50% {
+      color: red;
+    }
+  }
+
+  .general-track-note {
+    font-weight: bold;
+    font-size: 1.2rem;
+    animation: flashRed 2s infinite;
   }
 </style>
 
