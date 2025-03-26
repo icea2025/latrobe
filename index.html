@@ -73,9 +73,49 @@
     <div id="conference-info">CONFERENCE STARTS IN</div>
     <div id="countdown"></div>
   </div>
+<!-- Conference Intro Animation -->
+<div class="container my-5">
+  <div class="animated-intro text-center">
+    <p class="intro-line">
+      🌏 Welcome to ACM ICEA 2025, hosted in Melbourne – the world's most livable city!
+    </p>
+    <p class="intro-line delay-1">
+      🚀 Explore cutting-edge research across diverse tracks including AI, Cybersecurity, Smart Grids, Quantum Computing, and 6G Networks.
+    </p>
+    <p class="intro-line delay-2">
+      📝 Not sure where your work fits? Submit to our General Track – all high-quality research is welcome!
+    </p>
+  </div>
+</div>
+
+<style>
+  .animated-intro {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .intro-line {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #004080;
+  }
+
+  .delay-1 { animation-delay: 1s; }
+  .delay-2 { animation-delay: 2s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
 
 <div class="text-center my-4">
-  <img src="image/MELBOUNE.jpg" alt="Melbourne City" class="img-fluid rounded" style="max-width: 400px; height: auto;">
+  <img src="image/MELBOUNE.jpg" alt="Melbourne City" class="img-fluid rounded" style="max-width: 800px; height: auto;">
 </div>
 
   
