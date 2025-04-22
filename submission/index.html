@@ -10,6 +10,9 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     .navbar {
       background-color: #004080;
@@ -25,6 +28,10 @@
     }
     .content {
       margin-top: 20px;
+      flex: 1;
+    }
+    footer {
+      background-color: #343a40;
     }
   </style>
 </head>
@@ -38,109 +45,62 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/latrobe/index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/latrobe/index.html#important-dates">Important Dates</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/latrobe/committee/index.html">Conference Committee</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/latrobe/papers/index.html">Call for Papers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/latrobe/submission/index.html">Paper Submission</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/latrobe/registration/index.html">Registration</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/latrobe/program/index.html">Program</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/latrobe/keynote/index.html">Keynote Speech</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/latrobe/venue/index.html">Venue</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/index.html#important-dates">Important Dates</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/committee/index.html">Conference Committee</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/papers/index.html">Call for Papers</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/submission/index.html">Paper Submission</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/registration/index.html">Registration</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/program/index.html">Program</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/keynote/index.html">Keynote Speech</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/venue/index.html">Venue</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container">
-  <div class="content">
-    <div>
-      <h2 style="color: #0000ff">Submission Guidelines</h2>
-      <p style="text-align: justify">
-        Authors are invited to submit original papers: they must not substantially duplicate work
-        that any of the authors have published elsewhere or have submitted in parallel to journals
-        or any other conferences that have proceedings.
-      </p>
-      <p style="text-align: justify">
-        Submissions must be formatted using two-columns and may be up to 6 pages in length,
-        including all tables, figures, appendices, and references. We also welcome 2 page
-        work-in-progress (WIP) short paper submissions. In case of a short submission, please mark
-        '[WIP]' at the beginning of your paper title.
-      </p>
-      <p style="text-align: justify">
-        Download the paper form below, and submit the paper by
-        <b style="color: #ff0000">&nbsp;July 6, 2025, 23:59 AEST</b>. LaTex and MS-Word templates for ICEA 2025 are available
-        here:
-      </p>
-      <ul>
-        <li>
-          <p>
-            LaTex Templates:
-            <a href="https://icea-conf.github.io/2024/template/ICEA2023_Latex_Template-r2.zip">[LaTex]</a>
-          </p>
-        </li>
-        <li>
-          <p>
-            MS-Word Templates:
-            <a href="https://icea-conf.github.io/2024/template/icea_2024_Word_Template-r2.docx">[MS-Word]</a>
-          </p>
-        </li>
-      </ul>
-      <p style="text-align: justify">
-        All paper submissions will be handled electronically. The submission process will soon be
-        announced.
-      </p>
-    </div>
+<div class="container content">
+  <div>
+    <h2 style="color: #0000ff">Submission Guidelines</h2>
+    <p style="text-align: justify">Authors are invited to submit original papers: they must not substantially duplicate work that any of the authors have published elsewhere or have submitted in parallel to journals or any other conferences that have proceedings.</p>
+    <p style="text-align: justify">Submissions must be formatted using two-columns and may be up to 6 pages in length, including all tables, figures, appendices, and references. We also welcome 2 page work-in-progress (WIP) short paper submissions. In case of a short submission, please mark '[WIP]' at the beginning of your paper title.</p>
+    <p style="text-align: justify">Download the paper form below, and submit the paper by <b style="color: #ff0000">July 6, 2025, 23:59 AEST</b>. LaTex and MS-Word templates for ICEA 2025 are available here:</p>
+    <ul>
+      <li><p>LaTex Templates: <a href="https://icea-conf.github.io/2024/template/ICEA2023_Latex_Template-r2.zip">[LaTex]</a></p></li>
+      <li><p>MS-Word Templates: <a href="https://icea-conf.github.io/2024/template/icea_2024_Word_Template-r2.docx">[MS-Word]</a></p></li>
+    </ul>
+    <p style="text-align: justify">All paper submissions will be handled electronically. The submission process will soon be announced.</p>
+  </div>
 
-   <div style="padding-top: 10px">
-  <h2 style="color: #0000ff">How to Submit</h2>
-  <p style="text-align: justify">
-    Authors must create a CMT account before submitting their paper. Please follow the instructions
-    provided by Microsoft CMT to complete your submission.
-  </p>
-  <ul>
-    <li><a href="https://cmt3.research.microsoft.com/docs/help/general/account-creation.html" target="_blank">Create a CMT Account</a></li>
-    <li><a href="https://cmt3.research.microsoft.com/docs/help/author/author-submission-form.html" target="_blank">How to Submit a Paper</a></li>
-  </ul>
-  <p style="text-align: justify; margin-top: 10px;">
-    <strong style="color: #d9534f;">CMT Submission Link Coming Soon</strong><br>
-    The CMT paper submission portal for ICEA 2025 will be available shortly. Please check back soon.
-  </p>
-  <p style="text-align: justify; margin-top: 20px; font-style: italic; font-size: 0.95em;">
-    The Microsoft CMT service was used for managing the peer-reviewing process for this conference.
-    This service was provided for free by Microsoft and they bore all expenses, including costs
-    for Azure cloud services as well as for software development and support.
-  </p>
-</div>
+  <div style="padding-top: 10px">
+    <h2 style="color: #0000ff">How to Submit</h2>
+    <p style="text-align: justify">
+      Authors must create a CMT account before submitting their paper. Please follow the instructions
+      provided by Microsoft CMT to complete your submission.
+    </p>
+    <ul>
+      <li><a href="https://cmt3.research.microsoft.com/docs/help/general/account-creation.html" target="_blank">Create a CMT Account</a></li>
+      <li><a href="https://cmt3.research.microsoft.com/docs/help/author/author-submission-form.html" target="_blank">How to Submit a Paper</a></li>
+    </ul>
+    <p style="text-align: justify; margin-top: 10px;">
+      <strong style="color: #d9534f;">CMT Submission Link Coming Soon</strong><br>
+      The CMT paper submission portal for ICEA 2025 will be available shortly. Please check back soon.
+    </p>
+    <p style="text-align: justify; margin-top: 20px; font-style: italic; font-size: 0.95em;">
+      The Microsoft CMT service was used for managing the peer-reviewing process for this conference.
+      This service was provided for free by Microsoft and they bore all expenses, including costs
+      for Azure cloud services as well as for software development and support.
+    </p>
+  </div>
 </div>
 
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-4 mt-5">
+<footer class="text-white text-center py-4 mt-auto">
   <div class="container">
     <p class="mb-1"><strong>Hosted by La Trobe University, Australia</strong></p>
     <p class="mb-0">The proceedings will be published in the <strong>ACM International Conference Proceedings Series (ICPS)</strong></p>
   </div>
 </footer>
 
-<!-- Bootstrap JS (required for navbar toggling) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
