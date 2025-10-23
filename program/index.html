@@ -56,40 +56,68 @@
     <div class="content">
       <h2 style="color: #0000ff">ACM ICEA 2025 Program at a Glance</h2>
       <div class="mt-4">
+
+  <style>
+    .session-table {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .special-session {
+      background-color: #fff8e1; /* light yellow */
+      font-weight: bold;
+    }
+    .tea-session {
+      background-color: #e8f4fc; /* light blue */
+      font-weight: bold;
+    }
+    .lunch-session {
+      background-color: #eafbea; /* light green */
+      font-weight: bold;
+    }
+    .dinner-session {
+      background-color: #fdecef; /* light pink */
+      font-weight: bold;
+    }
+    .fw-bold.text-center {
+      background-color: #f1f1f1;
+    }
+  </style>
+
   <h4 class="text-primary">Day 1: December 3, 2025 (Wednesday)</h4>
-  <table class="table table-bordered table-striped mt-3">
+  <table class="table table-bordered table-striped mt-3 session-table">
     <thead class="table-primary">
       <tr><th>Time</th><th>Session</th></tr>
     </thead>
     <tbody>
-      <tr><td>10:00 - 11:00</td><td>Morning Tea and Networking</td></tr>
+      <tr class="tea-session"><td>10:00 - 11:00</td><td>☕ Morning Tea and Networking</td></tr>
       <tr><td>11:00 - 12:00</td><td>Keynote Session on Emerging Technologies</td></tr>
-      <tr><td>12:00 - 13:30</td><td>Lunch</td></tr>
+      <tr class="lunch-session"><td>12:00 - 13:30</td><td>🍽️ Lunch</td></tr>
       <tr><td colspan="2" class="fw-bold text-center">Paper Presentations (25 min + 5 min Q&A)</td></tr>
       <tr><td>13:30 - 14:00</td><td>Hybrid PII Masking and RAG-based LLM Inference for Privacy-Preserving QA on Clio-X — <em>Soonhong Kwon</em></td></tr>
       <tr><td>14:00 - 14:30</td><td>An AI-based Risk-Adaptive MFA Framework for Keycloak Using Behavioral Login Analysis — <em>Wooyoung Son</em></td></tr>
       <tr><td>14:30 - 15:00</td><td>Robustness Analysis of Fed-DTB: Coordinated Multi-Vector Attack Evaluation and Scalability Study in IoV Networks — <em>Ahmed Alruwaili</em></td></tr>
-      <tr><td>15:00 - 15:30</td><td>Afternoon Tea and Networking</td></tr>
+      <tr class="tea-session"><td>15:00 - 15:30</td><td>☕ Afternoon Tea and Networking</td></tr>
       <tr><td>15:30 - 16:00</td><td>Enhancing decision-making through real-time detection of diverse anomalies in data streams — <em>Obaid Alotaibi</em></td></tr>
       <tr><td>16:00 - 16:30</td><td>Distributed Multiplier-Coordination Method for Non-convex Constrained Network Optimization — <em>Shuo Chen</em></td></tr>
-      <tr><td>18:00</td><td>Gala Dinner</td></tr>
+      <tr class="dinner-session"><td>18:00</td><td>🎉 Gala Dinner</td></tr>
     </tbody>
   </table>
 
   <h4 class="text-primary mt-5">Day 2: December 4, 2025 (Thursday)</h4>
-  <table class="table table-bordered table-striped mt-3">
+  <table class="table table-bordered table-striped mt-3 session-table">
     <thead class="table-primary">
       <tr><th>Time</th><th>Session</th></tr>
     </thead>
     <tbody>
-      <tr><td>10:00 - 11:00</td><td>Morning Tea and Networking</td></tr>
+      <tr class="tea-session"><td>10:00 - 11:00</td><td>☕ Morning Tea and Networking</td></tr>
       <tr><td colspan="2" class="fw-bold text-center">Paper Presentations (25 min + 5 min Q&A)</td></tr>
       <tr><td>11:00 - 11:30</td><td>A Neural Architecture Search for Optimal Power Flow — <em>Ting-Yin Liu</em></td></tr>
       <tr><td>11:30 - 12:00</td><td>An Effective Ensemble Algorithm with Improved DLinear Model for Power Generation Prediction — <em>Zheng-Wei Huang</em></td></tr>
-      <tr><td>12:00 - 13:30</td><td>Lunch</td></tr>
+      <tr class="lunch-session"><td>12:00 - 13:30</td><td>🍽️ Lunch</td></tr>
       <tr><td>13:30 - 14:00</td><td>An Effective Index-Encoded DE-based Hyper-Heuristic for Single-Objective Optimization — <em>Hsin-Yu Wang</em></td></tr>
       <tr><td>14:00 - 14:30</td><td>Keylight: A Key-Intersection-Focused Reinforcement Learning Model for Traffic Signal Control — <em>Chia Feng Liao</em></td></tr>
-      <tr><td>14:30 - 15:00</td><td>Afternoon Tea and Networking</td></tr>
+      <tr class="tea-session"><td>14:30 - 15:00</td><td>☕ Afternoon Tea and Networking</td></tr>
       <tr><td>15:00 - 15:30</td><td>Quantum Machine Learning for Respiratory Rate Prediction from ECG Data — <em>Sudarsanam S.K.</em></td></tr>
       <tr><td>15:30 - 16:00</td><td>Vertical Quantum Federated Learning — <em>Rocco Ballester</em></td></tr>
       <tr><td>16:00 - 16:30</td><td>Quantum Public-Key Encryption via Lackadaisical Quantum Walks on a Cycle Graph — <em>Rachana Soni</em></td></tr>
@@ -97,15 +125,16 @@
   </table>
 
   <h4 class="text-primary mt-5">Day 3: December 5, 2025 (Friday)</h4>
-  <table class="table table-bordered table-striped mt-3">
+  <table class="table table-bordered table-striped mt-3 session-table">
     <thead class="table-primary">
       <tr><th>Time</th><th>Session</th></tr>
     </thead>
     <tbody>
-      <tr><td>10:00 - 11:00</td><td>Morning Tea and Networking</td></tr>
-      <tr><td>11:00</td><td>Open Discussion</td></tr>
+      <tr class="tea-session"><td>10:00 - 11:00</td><td>☕ Morning Tea and Networking</td></tr>
+      <tr class="special-session"><td>11:00</td><td>💬 Open Discussion</td></tr>
     </tbody>
   </table>
+
 </div>
 
     </div>
