@@ -12,6 +12,10 @@
     }
     .navbar {
       background-color: #004080;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
     }
     .navbar a {
       color: white !important;
@@ -48,12 +52,31 @@
 </head>
 <body>
 
+<!-- ===== NAVBAR ===== -->
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
-    <a class="navbar-brand" href="#">ACM ICEA 2025</a>
+    <a class="navbar-brand" href="/latrobe/index.html">ACM ICEA 2025</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/latrobe/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/index.html#important-dates">Important Dates</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/committee/index.html">Conference Committee</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/papers/index.html">Call for Papers</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/submission/index.html">Paper Submission</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/registration/index.html">Registration</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/program/index.html">Program</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/keynote/index.html">Keynote Speech</a></li>
+        <li class="nav-item"><a class="nav-link" href="/latrobe/venue/index.html">Venue</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
+<!-- ===== MAIN CONTENT ===== -->
 <div class="container mt-4">
   <h2 class="text-primary">ACM ICEA 2025 – Tentative Program Schedule</h2>
 
@@ -150,7 +173,6 @@
     </tbody>
   </table>
 
-  <!-- ===== IN-PERSON PRESENTATIONS ===== -->
   <table class="table table-bordered table-striped mt-2 session-table">
     <thead class="table-secondary">
       <tr><th>Time</th><th>Paper ID</th><th>Title</th><th>Presenter</th></tr>
@@ -186,12 +208,14 @@
     </tbody>
   </table>
 
+  <!-- CONTACT -->
   <div class="text-center mt-5">
     <h5 style="color: #004085;">📬 Need Help?</h5>
     <p>For any queries, contact <a href="mailto:icealatrobe2025@gmail.com" style="color: #d63384; font-weight:bold;">icealatrobe2025@gmail.com</a></p>
   </div>
 </div>
 
+<!-- ===== FOOTER ===== -->
 <footer class="bg-dark text-white text-center py-4 mt-5">
   <div class="container">
     <p><strong>Hosted by La Trobe University, Australia</strong></p>
