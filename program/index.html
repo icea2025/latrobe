@@ -48,16 +48,18 @@
     .fw-bold.text-center {
       background-color: #f1f1f1;
     }
-    .blink-red {
-      color: red;
-      font-weight: bold;
-      animation: blink 1s step-start infinite;
-    }
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
-    }
+.blink-red {
+    color: red;
+    font-weight: bold;
+    animation: slowBlink 2.5s ease-in-out infinite;
+  }
+
+  @keyframes slowBlink {
+    0% { opacity: 1 }
+    40% { opacity: 1 }
+    60% { opacity: 0 }
+    100% { opacity: 1 }
+  }
   </style>
 </head>
 <body>
@@ -273,6 +275,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
