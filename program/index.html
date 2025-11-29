@@ -48,6 +48,16 @@
     .fw-bold.text-center {
       background-color: #f1f1f1;
     }
+    .blink-red {
+      color: red;
+      font-weight: bold;
+      animation: blink 1s step-start infinite;
+    }
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -102,9 +112,10 @@
   </div>
 </div>
 
-<h5 class="text-secondary mt-4">
+<h5 class="mt-4 blink-red">
   Venue: La Trobe University, City Campus, 360 Collins St, Level 2, Room 2.10
 </h5>
+
 
   <!-- ===== DAY 1 ===== -->
   <h4 class="text-primary mt-4">Day 1: December 3, 2025 (Wednesday)</h4>
@@ -262,6 +273,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
